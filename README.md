@@ -1,33 +1,83 @@
-# PerFinance-Dashboard
-Personal Finance Dashboard
-Objective: Create an interactive web application for personal financial management
-Core Purpose:
-This project helps users visualize spending patterns, track budgets, and manage financial goals through an intuitive dashboard. It transforms raw transaction data into actionable insights using data analysis and visualization techniques.
-Key Features:
-Dynamic Data Handling:
-Processes CSV/Excel files with transaction records
-Automatic date parsing and currency conversion
-Data validation to ensure integrity of financial records
-Visual Analytics:
-Interactive line charts for monthly expenditure trends
-Pie charts for category-wise spending breakdowns
-Budget vs actual comparison bars with color-coded alerts
-Customization:
-Configurable budget limits per spending category
-Multiple currency support
-Customizable chart themes and layouts
-Technical Components:
-Frontend: Streamlit for web interface
-Data Processing: Pandas for data manipulation
-Visualization: Plotly for interactive charts
-Validation: Custom Python validators for data sanity checks
-Implementation Workflow:
-Users upload transaction files through the web interface
-System processes data and merges with category definitions
-Engine generates visualizations and budget compliance reports
-Users interact with filters to analyze specific time periods/categories
-Use Cases:
-Tracking household expenses
-Identifying overspending patterns
-Preparing monthly financial reports
-Setting and monitoring savings goals
+# 📊 Personal Finance Dashboard
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
+![Pandas](https://img.shields.io/badge/Data-Pandas-150458)
+
+A dynamic web application for personal financial management and budget analysis.
+
+## 🚀 Key Features
+
+### 📈 Data Visualization
+- Interactive line charts for spending trends
+- Pie charts for category breakdowns
+- Budget vs actual comparison bars
+- Real-time updates on data changes
+
+### 🔧 Core Functionality
+- CSV/Excel file upload with validation
+- Customizable budget limits per category
+- Multi-currency support (USD, EUR, GBP)
+- Automated monthly reports generation
+
+## 🛠 Technical Stack
+
+**Frontend**  
+![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?logo=streamlit)  
+**Backend**  
+![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas)  
+![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?logo=plotly)  
+
+## ⚙ Installation
+
+Clone repository
+
+git clone https://github.com/yourusername/finance-dashboard.git
+Create virtual environment
+
+python -m venv venv
+source venv/bin/activate # Windows: venv\Scripts\activate
+Install dependencies
+
+pip install -r requirements.txt
+text
+
+## 🖥 Usage
+
+1. Prepare your data files:
+   - `data/transactions.csv` (required columns: Date, Description, Amount, Category)
+   - `data/categories.csv` (required columns: Category, Type)
+
+2. Launch application:
+streamlit run src/dashboard.py
+text
+
+3. Access dashboard at `http://localhost:8501`
+
+## ⚙ Configuration
+
+Modify `src/config.py`:
+Currency settings
+
+DEFAULT_CURRENCY = "USD" # Change to EUR/GBP
+Budget limits
+
+BUDGET_LIMITS = {
+"Essential": 2500.00,
+"Luxury": 800.00
+}
+Chart styling
+
+CHART_STYLE = {
+"width": 1200,
+"height": 600,
+"template": "plotly_dark"
+}
+text
+
+## 📸 Screenshots
+
+![Dashboard Preview](https://via.placeholder.com/800x400.png?text=Finance+Dashboard+Interface)
+
+## 📜 License
+MIT License - See [LICENSE](LICENSE) for details
