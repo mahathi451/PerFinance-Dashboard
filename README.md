@@ -79,5 +79,4 @@ text
 
 ![Dashboard Preview](https://via.placeholder.com/800x400.png?text=Finance+Dashboard+Interface)
 
-## 📜 License
-MIT License - See [LICENSE](LICENSE) for details
+
